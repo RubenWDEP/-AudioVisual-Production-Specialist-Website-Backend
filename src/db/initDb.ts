@@ -1,12 +1,5 @@
 import * as dotenv from "dotenv";
-import {
-  FieldPacket,
-  OkPacket,
-  QueryOptions,
-  ResultSetHeader,
-  RowDataPacket,
-} from "mysql2";
-import { IUser } from "../types";
+import { ResultSetHeader } from "mysql2";
 dotenv.config();
 
 import { getConnection } from "./db";

@@ -1,4 +1,6 @@
 import mysql from "mysql2/promise";
+import * as dotenv from "dotenv";
+dotenv.config();
 
 const { MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE } = process.env;
 

@@ -10,7 +10,7 @@ export const sendComment = async (
   try {
     connection = await getConnection();
     const [result] = await connection.query(
-      `INSERT INTO comments (section, name, email, comments) VALUES (?,?,?,?)
+      `INSERT INTO comments (section, name, email, comment) VALUES (?,?,?,?)
     `,
       [section, name, email, comment]
     );
