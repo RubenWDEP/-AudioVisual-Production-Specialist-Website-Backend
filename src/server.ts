@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express, {
   ErrorRequestHandler,
   Request,
@@ -7,9 +8,7 @@ import express, {
 import morgan from "morgan";
 import { sendEmailController } from "./Controllers/sendEmailController";
 import { NextFunction } from "express-serve-static-core";
-import * as dotenv from "dotenv";
 import sendCommentController from "./Controllers/sendCommentController";
-dotenv.config();
 
 const App = express();
 

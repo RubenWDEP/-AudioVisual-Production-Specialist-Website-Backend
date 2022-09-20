@@ -1,7 +1,4 @@
-import * as dotenv from "dotenv";
 import { ResultSetHeader } from "mysql2";
-dotenv.config();
-
 import { getConnection } from "./db";
 
 async function main() {

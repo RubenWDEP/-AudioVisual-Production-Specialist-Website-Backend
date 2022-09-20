@@ -44,8 +44,8 @@ const sendEmail = async (
 
     transport.verify((error, success) => {
       if (error) {
-        console.error(error);
-        console.log(error);
+        console.error(error.message);
+        console.log(error.message);
       } else {
         console.log("Server is ready to take our messages");
         console.log(success);
