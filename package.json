@@ -21,6 +21,7 @@
   "homepage": "https://github.com/RubenWDEP/-AudioVisual-Production-Specialist-Website-Backend#readme",
   "devDependencies": {
     "@tsconfig/node16": "^1.0.3",
+    "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/morgan": "^1.9.3",
     "@types/nodemailer": "^6.4.5",
@@ -30,6 +31,7 @@
     "typescript": "^4.8.2"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
     "googleapis": "^107.0.0",
@@ -37,6 +39,4 @@
     "mysql2": "^2.3.3",
     "nodemailer": "^6.7.8"
   }
-
-  
 }

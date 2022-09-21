@@ -5,6 +5,7 @@ import express, {
   RequestHandler,
   Response,
 } from "express";
+import cors from "cors";
 import morgan from "morgan";
 import { sendEmailController } from "./Controllers/sendEmailController";
 import { NextFunction } from "express-serve-static-core";
@@ -12,11 +13,12 @@ import sendCommentController from "./Controllers/sendCommentController";
 
 const App = express();
 
-const Port: number = 3000;
+const Port: number = 4000;
 
 //Dev middlewares --------------------------------------
 App.use(express.json());
 App.use(morgan("dev"));
+App.use(cors<Request>());
 
 //Endpoints --------------------------------------------
 App.post("/sendemail", sendEmailController);
