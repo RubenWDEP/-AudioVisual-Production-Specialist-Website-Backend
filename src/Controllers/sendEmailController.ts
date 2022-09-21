@@ -6,6 +6,7 @@ const sendEmailController: RequestHandler = async (req, res, next) => {
   try {
     const { name, email, comment }: Comment = req.body;
     const sendEmailAction = await sendEmail(name, email, comment);
+    console.log(name, email, comment);
 
     return res.send({
       code: 200,
