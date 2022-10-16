@@ -1,3 +1,4 @@
+import "dotenv/config";
 import { ResultSetHeader } from "mysql2";
 import { getConnection } from "./db";
 
@@ -13,8 +14,7 @@ async function main() {
       await connection.query<ResultSetHeader>(`CREATE TABLE IF NOT EXISTS comments(
         idComment INTEGER PRIMARY KEY AUTO_INCREMENT, 
         section VARCHAR (20) NOT NULL,
-        name VARCHAR (20) NOT NULL, 
-        email VARCHAR (50) NOT NULL, 
+        name VARCHAR (20) NOT NULL,  
         comment VARCHAR (280) NOT NULL,
         create_at DATETIME DEFAULT CURRENT_TIMESTAMP
     )`);
