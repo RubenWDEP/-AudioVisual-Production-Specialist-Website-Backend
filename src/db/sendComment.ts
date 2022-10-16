@@ -1,8 +1,8 @@
 import { getConnection } from "./db";
 
 export const sendComment = async (
-  name: string,
   section: string,
+  name: string,
   email: string,
   comment: string
 ) => {
@@ -14,6 +14,7 @@ export const sendComment = async (
     `,
       [section, name, email, comment]
     );
+
     return result;
   } finally {
     if (connection) {
