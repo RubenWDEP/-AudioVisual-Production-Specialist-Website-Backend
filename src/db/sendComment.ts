@@ -1,19 +1,19 @@
 import { getConnection } from "./db";
 
 export const sendComment = async (
-  name: string,
   section: string,
-  email: string,
+  name: string,
   comment: string
 ) => {
   let connection;
   try {
     connection = await getConnection();
     const [result] = await connection.query(
-      `INSERT INTO comments (section, name, email, comment) VALUES (?,?,?,?)
+      `INSERT INTO comments (section, name, comment) VALUES (?,?,?)
     `,
-      [section, name, email, comment]
+      [section, name, comment]
     );
+
     return result;
   } finally {
     if (connection) {

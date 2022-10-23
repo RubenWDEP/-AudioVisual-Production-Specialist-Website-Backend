@@ -1,10 +1,5 @@
 import "dotenv/config";
-import express, {
-  ErrorRequestHandler,
-  Request,
-  RequestHandler,
-  Response,
-} from "express";
+import express, { ErrorRequestHandler, Request, Response } from "express";
 import cors from "cors";
 import morgan from "morgan";
 import { sendEmailController } from "./Controllers/sendEmailController";
