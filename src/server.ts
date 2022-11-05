@@ -5,6 +5,7 @@ import morgan from "morgan";
 import { sendEmailController } from "./Controllers/sendEmailController";
 import { NextFunction } from "express-serve-static-core";
 import sendCommentController from "./Controllers/sendCommentController";
+import { getCommentController } from "./Controllers/getCommentController";
 
 const App = express();
 
@@ -18,6 +19,7 @@ App.use(cors<Request>());
 //Endpoints --------------------------------------------
 App.post("/sendemail", sendEmailController);
 App.post("/comments", sendCommentController);
+App.get("/getComments", getCommentController);
 
 //Errors------------------------------------------------
 App.use((req, res) => {
