@@ -12,6 +12,8 @@ export const getCommentController: RequestHandler = async (req, res, next) => {
     }
     const getCommentData = await getCommentAction(sectionCommentName);
 
+    console.log(getCommentData);
+
     return res.send({
       status: 200,
       result: getCommentData,
